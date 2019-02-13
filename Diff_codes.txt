@@ -1,0 +1,49 @@
+﻿		
+			ADD NEW ELEMENT:
+			~~~~~~~~~~~~~~~~			
+			Console.Write($"Enter new element: ");
+            int newElement = Convert.ToInt32(Console.ReadLine());
+            set1.Add(newElement);
+            set1.GetInfo();
+
+
+			DELETE ELEMENT FROM EXISTED:
+			~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            Console.Write($"\nEnter element to delete: ");
+            int oldElement = Convert.ToInt32(Console.ReadLine());
+            set1.Remove(oldElement);
+            set1.GetInfo();
+
+
+			Comparing with == :
+			~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			Set set30 = set1 + set2;
+            set30.Name = "Union2";
+            set30.GetInfo();
+			if (set3 == set30)
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine($"\t\t Correct Union.");
+                Console.ResetColor();
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.DarkRed;
+                Console.WriteLine("\t\t Not correct Union.");
+                Console.ResetColor();
+            }			
+
+
+
+
+			// Метод для вывода на консоль информации о типе-параметре
+	public void ShowParamType()
+	{
+		Console.WriteLine("Type parameter: " + typeof(T));
+	}
+
+	// Метод для вывода на консоль информации о типе класса
+	public void ShowClassType()
+	{
+		Console.WriteLine("Generic class type: " + this.GetType() + "\n");
+	}
